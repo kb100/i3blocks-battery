@@ -9,7 +9,7 @@ state = status.split(": ")[1].split(", ")[0]
 commasplitstatus = status.split(", ")
 percentleft = int(commasplitstatus[1].rstrip("%\n"))
 
-FA_LIGHTNING = '\uf0e7'
+FA_LIGHTNING = "\uf0e7"
 FA_PLUG = "\uf1e6"
 
 fulltext = "<span color='yellow'>{}</span>".format(FA_LIGHTNING)
