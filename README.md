@@ -2,7 +2,7 @@ i3blocks-battery is an i3blocks blocklet script to output the current status of 
 
 Dependencies: fonts-font-awesome, acpi, python3
 
-Suggested: i3 ( >= v4.3 ), i3blocks ( >= 1.4 )
+Suggested: i3 ( >= 4.3 ), i3blocks ( >= 1.4 )
 
 It looks like this:
 
