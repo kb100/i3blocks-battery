@@ -9,10 +9,10 @@ state = status.split(": ")[1].split(", ")[0]
 commasplitstatus = status.split(", ")
 percentleft = int(commasplitstatus[1].rstrip("%\n"))
 
-lightning = '<span color="yellow">\uf0e7</span>'
-plug = "\uf1e6"
+FA_LIGHTNING = '\uf0e7'
+FA_PLUG = "\uf1e6"
 
-fulltext = lightning
+fulltext = "<span color='yellow'>{}</span>".format(FA_LIGHTNING)
 timeleft = ""
 
 if state == "Discharging":
@@ -20,7 +20,7 @@ if state == "Discharging":
     time = ":".join(time.split(":")[0:2])
     timeleft = " ({})".format(time)
 else:
-    fulltext += " " + plug
+    fulltext += " " + FA_PLUG
 
 def color(percent):
     if percent < 10:
