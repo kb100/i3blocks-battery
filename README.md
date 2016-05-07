@@ -14,7 +14,7 @@ Is an i3blocks blocklet script to output the current status of your battery.
 
 ### Appearance
 
-![](https://raw.githubusercontent.com/p-hash/i3blocks-battery/master/images/1.png)
+![](images/1.png)
 
 ### Usage
 To use with i3blocks, copy the blocklet configuration in the given `i3blocks.conf` into your i3blocks configuration file, the recommended config is
