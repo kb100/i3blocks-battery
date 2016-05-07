@@ -50,12 +50,9 @@ elif state == "Charging":
 else:
     fulltext += " " + FA_FULL
 
-if percentleft != 100:
-    fulltext += ' '
-if percentleft < 10:
-    fulltext += ' '
 form =  '<span color="{}">{}%</span>'
-fulltext += form.format(color(percentleft), percentleft)
+percent_string = str(percentleft).rjust(3)
+fulltext += form.format(color(percentleft), percent_string)
 
 if os.environ.get('BLOCK_BUTTON'):
     Popen(['notify-send', timeleft])
