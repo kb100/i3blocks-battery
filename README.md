@@ -6,7 +6,15 @@ Suggested: i3 ( >= 4.3 ), i3blocks ( >= 1.4 )
 
 It looks like this:
 
-![](https://raw.githubusercontent.com/kb100/i3blocks-battery/master/images/1.png)
+![](images/full.png)
+
+![](images/charging.png)
+
+![](images/unplugged.png)
+
+![](images/unknown.png)
+
+![](images/nobattery.png)
 
 To use with i3blocks, copy the blocklet configuration in the given `i3blocks.conf` into your i3blocks configuration file, the recommended config is
 
