@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 #
+# Copyright (C) 2016 James Murphy
+# Licensed under the GPL version 2 only
+#
 # A battery indicator blocklet script for i3blocks
 
 from subprocess import check_output
@@ -9,6 +12,7 @@ status = check_output(['acpi'], universal_newlines=True)
 if not status:
     # stands for no battery found
     fulltext = "<span color='red'><span font='FontAwesome'>\uf00d \uf240</span></span>"
+    percentleft = 100
 else:
     state = status.split(": ")[1].split(", ")[0]
     commasplitstatus = status.split(", ")
