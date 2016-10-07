@@ -14,10 +14,20 @@ if not status:
     fulltext = "<span color='red'><span font='FontAwesome'>\uf00d \uf240</span></span>"
     percentleft = 100
 else:
-    state = status.split(": ")[1].split(", ")[0]
-    commasplitstatus = status.split(", ")
-    percentleft = int(commasplitstatus[1].rstrip("%\n"))
-
+    # if there is more than one battery in one laptop, the percentage left is available for each battery separatelly, although state and remaining time for overall block is shown in the status of the first battery 
+    batteries = status.split("\n")
+    state_batteries=[]
+    commasplitstatus_batteries=[]
+    percentleft_batteries=[]
+    for battery in batteries:
+        if battery!='':
+            state_batteries.append(battery.split(": ")[1].split(", ")[0])
+            commasplitstatus = battery.split(", ")
+            percentleft_batteries.append(int(commasplitstatus[1].rstrip("%\n")))
+            commasplitstatus_batteries.append(commasplitstatus)
+    state = state_batteries[0]
+    commasplitstatus = commasplitstatus_batteries[0]
+    percentleft = sum(percentleft_batteries) / len(percentleft_batteries)
     # stands for charging
     FA_LIGHTNING = "<span color='yellow'><span font='FontAwesome'>\uf0e7</span></span>"
 
