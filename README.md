@@ -1,3 +1,9 @@
+# PROJECT MOVED
+
+This project has been merged into [i3blocks-contrib](https://github.com/vivien/i3blocks-contrib),
+which I maintain.
+Please send any bug reports, pull requests, or stars that way.
+
 i3blocks-battery is an i3blocks blocklet script to output the current status of your battery.
 
 Dependencies: fonts-font-awesome, acpi, python3
